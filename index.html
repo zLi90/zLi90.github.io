@@ -53,9 +53,7 @@
                         environmental fluid mechanics, hydrology and multiphase flow in porous media. The core of my research is to
                         combine innovative numerical algorithms and advanced computing technologies, aiming at understanding complex
                         fluid processes in the environment and developing mature tools for solving practical large-scale engineering
-                        problems. With this aim, my research is inevitably interdisciplinary, involving fluid mechanics, hydrology,
-                        hydrogeology, numerical methods and high-performance computing  </p>
-                    <p class="lead mb-5">(This site is still under construction...)</p>
+                        problems.  </p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://github.com/zLi90"><i class="fab fa-github"></i></a>
                         <a class="social-icon" href="https://scholar.google.com/citations?user=IQeV41MAAAAJ&hl=en"><i class="fab fa-google"></i></a>
@@ -73,91 +71,12 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Overview</h3>
+							Two main themes of my research are:
+							(1) Develop HPC-based numerical methods and models to achieve accurate, efficient and robust hydrologic simulations.
+							(2) Apply the developed model to solve scientific and engineering problems in surface and subsurface hydrology.
                             <span class="d-none d-lg-block"><img class="img-fluid" src="assets/img/fig0.png" alt="..." /></span>
                         </div>
                     </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Salinity Evolution in Coastal Wetlands</h3>
-                            <p class="lead mb-5">I develop numerical models to simulate surface flow,
-                                surface-subsurface exchange and scalar transport in coastal wetlands.
-                                The focus is on (1) representing small-scale environmental processes in corase-grid models and
-                                (2) optimizing model coupling to enable fast 3D, field-scale simulation. </p>
-                            <span class="d-none d-lg-block"><img class="img-fluid" src="assets/img/fig5.png" alt="..." /></span>
-                            <div class="subheading mb-3">Subgrid Topography</div>
-                            <p class="lead mb-5">A subgrid topography model is designed to parametrize small-scale topographic features
-                                on much coarser grid cells. This method allows hydrodynamic simulation on efficient coarse grids without
-                                losing the small-scale flow-topography interactions. It is useful for shallow wetland simulations where
-                                water flow is strongly affected by the complex topography. <p>
-                            <p>For more info: <p>
-                            <a href="https://doi.org/10.1016/j.advwatres.2019.05.004"> 10.1016/j.advwatres.2019.05.004 </a>
-                            <br/>
-                            <a href="https://doi.org/10.1016/j.advwatres.2019.103465"> 10.1016/j.advwatres.2019.103465 </a>
-
-                            <div class="subheading mb-3">Surface-subsurface Coupling</div>
-                            <p class="lead mb-5">A coupled 2D surface flow and 3D variably saturated subsurface flow model (Frehg) is developed.
-                                The purpose of developing Frehg is to model salintiy evolution in shallow wetlands that is affected by
-                                tidal intrusion, evaporation, surface-subsurface exchange, and the complex 3D topography.
-                                The codes of Frehg can be found on my Github repo. <p>
-                            <p>For more info: <p>
-                            <a href="https://doi.org/10.3390/w13070902"> 10.3390/w13070902 </a>
-                            <br/>
-                            <a href="https://doi.org/10.1016/j.jhydrol.2023.129268"> 10.1016/j.jhydrol.2023.129268 </a>
-                        </div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Multi-phase Flow in Fractured Shale Reservoirs</h3>
-                            <p class="lead mb-5">I develop numerical models to simulate multi-phase flow in porous media.
-                                Specifically, I focus on simulating water, gas and oil production from shale reservoirs,
-                                representing the multi-scale fracture system in the multi-phase flow model to
-                                achieve reasonable estimation of reservoir production. </p>
-                            <span class="d-none d-lg-block"><img class="img-fluid" src="assets/img/fig6.png" alt="..." /></span>
-                            <div class="subheading mb-3">Multiscale Fracture Network</div>
-                            <p class="lead mb-5">One challenge in shale reservoir simulation
-                                (and perhaps any flow simulation of underground reservoirs) is to
-                                model the multi-scale fracture network. Our approach is to model the primary hydraulic fractures using a geomechanics model (GEOS),
-                                and represent the secondary fractures as non-uniform dual-permeability elements. We found that the spatial heterogeneity
-                                of the fracture aperture is critical in matching the production data for shale reservoirs. <p>
-                            <p>For more info: <p>
-                            <a href="https://doi.org/10.3390/en14030641"> 10.3390/en14030641 </a>
-                            <br/>
-                            <a href="https://doi.org/10.1007/s11242-022-01841-0"> 10.1007/s11242-022-01841-0 </a>
-                        </div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Parallel Solvers for the Richards Equation</h3>
-                            <p class="lead mb-5">I develop parallel numerical solvers to solve the Richards equation, which is a key component of catchment-scale
-                                hydrological models. Common numerical schemes for the Richards equation are mostly iterative (e.g., the Picard scheme and the Newton-Raphson
-                                scheme). However, it remains a question if these schemes scale well on multi CPUs or GPUs. An alternative is the non-iterative predictor-corrector
-                                scheme, which is robust, but suffers from a small dt. The attached figure shows that as dt increases, more linear solver iterations are
-                                required, indicating that we cannot simply use dt to evaluate the efficiency of a scheme. The non-iterative scheme might outperform the iterative
-                                schemes when parallelized, if the non-iterative scheme requires fewer linear solver iterations. We are still testing if this is the case...  </p>
-                            <span class="d-none d-lg-block"><img class="img-fluid" src="assets/img/fig7.png" alt="..." /></span>
-                            <p>For more info: <p>
-                            <a href="https://doi.org/10.1016/j.jhydrol.2020.125809"> 10.1016/j.jhydrol.2020.125809 </a>
-                            <a href="https://doi.org/10.1016/j.envsoft.2023.105900"> https://doi.org/10.1016/j.envsoft.2023.105900 </a>
-                        </div>
-                    </div>
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Urban Floods and Resillient Cities </h3>
-                            <p class="lead mb-5">I develop numerical models to simulate urban floods. I focus on multi-hazard scenarios such as
-                                flooding over previously damaged areas (e.g., by earthquake), as well as on the underground infrastructures (e.g., urban metro stations).
-                                These scenarios are rarely studied, but they are closely related to city resillience. I use SERGHEI model for process-based urban flood simulation.
-                                SERGHEI is a parallel model that uses GPUs to perform high-resolution hydrodynamic simulations. This work is still on going and more results
-                                should be expected in the future. </p>
-                            <p>For more info: <p>
-                            <a href="https://gitlab.com/serghei-model/serghei"> SERGHEI </a>
-
-                        </div>
-                    </div>
-
                 </div>
             </section>
             <hr class="m-0" />
@@ -165,6 +84,8 @@
             <section class="resume-section" id="publications">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Publications</h2>
+                    <p>[20] N Zheng, <b> Z Li</b>, X Xia, S Gu, X Li, S Jiang, Estimating line contaminant sources in non-Gaussian groundwater conductivity fields using deep learning-based framework. Journal of Hydrology (2024), 630, 130727<p>
+                    <a href="https://doi.org/10.1016/j.jhydrol.2024.130727"> https://doi.org/10.1016/j.jhydrol.2024.130727 </a>
                     <p>[19] <b> Z Li</b>, D Caviedes-Voullieme, I Ozgen-Xian, S Jiang, N Zheng, A comparison of numerical schemes for the GPU-accelerated simulation of variably-saturated groundwater flow. Environmental Modelling & Software (2024), 171, 105900<p>
                     <a href="https://doi.org/10.1016/j.envsoft.2023.105900"> https://doi.org/10.1016/j.envsoft.2023.105900 </a>
                     <p>[18] C Wu, S Jiang, X Xia, Y Sun, <b> Z Li</b>, M Ju, S Li and S Liu, Estimation of pollution sources and hydraulic conductivity field in a coastal aquifer under tidal effects. Marine Georesources & Geotechnology (2024) <p>
@@ -224,20 +145,6 @@
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">August 2019 - November 2021</span></div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Graduate Research Assisstant</h3>
-                            <div class="subheading mb-3">The University of Texas at Austin, Austin, TX, USA</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2014 - May 2019</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Undergraduate Research Assisstant</h3>
-                            <div class="subheading mb-3">University of Michigan Ann Arbor, Ann Arbor, MI, USA</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">May 2012 - August 2013</span></div>
-                    </div>
                 </div>
             </section>
             <hr class="m-0" />
@@ -283,7 +190,7 @@
                     <h2 class="mb-5">Team</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <p class="lead mb-5">Our group photo taken on Sept. 2023 (when we were watching Oppenheimer)</p>
+                            <p class="lead mb-5">Our group photo taken on Sept. 2023</p>
                             <span class="d-none d-lg-block"><img class="img-fluid" src="assets/img/group.png" alt="..." /></span>
                         </div>
                     </div>
@@ -291,7 +198,7 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Openings </h3>
-                            <p class="lead mb-5">MS, PhD and Postdoc positions are all available. Please contact by email if you are interested. Note that for applicants whose first language is not Chinese, an HSK score is mandatory. </p>
+                            <p class="lead mb-5">MS, PhD and Postdoc positions are all available. Please contact by email if you are interested. Note that (1) experience in numerical modeling and coding is not mandatory, but is strongly recommended, and (2) for applicants whose first language is not Chinese, an HSK score is mandatory. </p>
                         </div>
                     </div>
                     
